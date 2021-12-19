@@ -3,6 +3,7 @@ import 'package:secondproject/pages/home_page.dart';
 import 'package:secondproject/pages/login_page.dart';
 //ignore: import_of_legacy_library_into_null_safe;
 import 'package:google_fonts/google_fonts.dart';
+import 'package:secondproject/utils/routes.dart';
 
 void main() {
   runApp(Myapp());
@@ -26,8 +27,8 @@ class Myapp extends StatelessWidget {
       initialRoute: "/login",
       routes: {
         "/": (context) => LoginPage(),
-        "/home": (context) => HomePage(),
-        "/login": (context) => LoginPage()
+        MyRoutes.homeRoute: (context) => HomePage(),
+        MyRoutes.loginRoute: (context) => LoginPage()
       },
     );
   }
